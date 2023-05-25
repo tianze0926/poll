@@ -1,0 +1,25 @@
+wx_push: # https://wxpusher.zjiecode.com/docs/#/
+  app_token: AT_...
+  topic_ids:
+    - '1234'
+  uids: []
+
+concerts:
+  - url: 'https://asd...'
+    name: 'asd' # for notification only
+
+duration: # in seconds
+  inner:
+    # type: fixed
+    # len: 60.0
+    type: gamma # https://statdist.com/distributions/gamma
+    k: 20.0
+    theta: 3.5
+  outer:
+    # type: fixed
+    # len: 300.0
+    type: gamma
+    k: 20.0
+    theta: 15.0
+
+timeout: 10.0 # in seconds
